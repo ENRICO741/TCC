@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-image: url(../img/wave.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    width: auto;
+    height: 200px;
+}
+main{
+    width: auto;
+    height:800px;
+}
+#logo-site {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    margin:  auto;
+    margin-top: 200px;
+}
+#tituloSite{
+    height: 100px;
+    width:100px;
+    display: flex;
+    justify-content: center;
+    margin:  auto;
+    margin-top:20px;
+
+}
+h1{
+    color: #225E77;
+    font-size: 5rem;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+h2{
+    color:#225E77;
+    font-size: 5rem;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+}
+#desc-site{
+    width:500px;
+    height: 500px;
+    display:flex;
+    justify-content: center;
+    margin: auto;
+}
+p{
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 300px;
+    padding-left:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height:auto;
+    
+}
+#btn-empresa{
+  height:15%;
+  width: 18%;
+  min-height:10%;
+  min-width:10%;
+  background-color: #1E7596;
+  color: white;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 40px;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width:1000px){
+    #btn-empresa{
+        height:15%;
+        width: 60%;
+        background-color: #1E7596;
+        color: white;
+        border-radius: 10px;
+        margin-left: 40px;
+        border:none;
+    }
+    }   
+.container-empresa{
+    width: 70px;
+    height:70px;
+}
+.img-empresa{
+    width:60px;
+    height:60px;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.select-empresa{
+    width: auto;
+    height:100px;
+    margin-left:150px;
+    margin-top:-50px;
+}
+@media (max-width:1000px){
+    .container-botoes{
+        height:100%;
+        width: 100%;
+        display:flex;
+        justify-content:center;
+        align-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: -230px;
+    }
+}
+.container-botoes{
+    height:100%;
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-content: center;
+    padding-top: 40px;  
+}
+#btn-candidato{
+    height:15%;
+    width: 18%;
+    min-height:10%;
+    min-width:10%;
+    background-color: #1E7596;
+    color: white;
+    border-radius: 5px;
+    margin-left: 40px;
+    border:none; 
+    cursor: pointer;   
+}
+@media (max-width:1000px){
+    #btn-candidato{
+        height:15%;
+        width: 60%;
+        background-color: #1E7596;
+        color: white;
+        border-radius: 10px;
+        margin-left: 40px;
+        border:none;
+        
+    }
+    }
+.container-candidato{
+    width: 70px;
+    height:70px
+}
+.img-candidato{
+    width:60px;
+    height:60px;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.select-candidato{
+    width: auto;
+    height:100px;   
+    margin-left:150px;
+    margin-top:-50px;
+}
+span{
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin-left:-40px;
+}
+@media (max-width:1000px){
+    span{
+        font-size: 1.1rem;
+        font-family: 'Poppins', sans-serif;
+        margin-left:-75;
+    }
+}
+@media (max-width:1000px){
+    p{
+        width:90%;
+        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 300px;
+        padding-left:40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height:auto;
+        margin-top: -90px;
+    }
+}
+@media (max-width:1000px){
+    #logo-site {
+        width: 160px;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        margin:  auto;
+        margin-top: 170px;
+    }
+}@media (max-width:1000px){
+    h1{
+        color: #225E77;
+        font-size: 4rem;
+        align-items: center;
+        font-family: 'Roboto', sans-serif; 
+    }
+}
+@media (max-width:1000px){
+    h2{
+        color:#225E77;
+        font-size: 4rem;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        padding-left: 10px;
+    }
+}
