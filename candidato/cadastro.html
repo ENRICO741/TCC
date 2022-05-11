@@ -8,11 +8,13 @@
     <link rel="icon" type="image/png" sizes="15x15" href="../img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="../js/candidatoCadastro.js" defer></script>
+    <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "asfBZcBqQ3");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+    <script src="../js/candidato.js" defer type="module"></script>
+    
     <title>Cadastro</title>
 </head>
 <body>
@@ -25,26 +27,36 @@
             <h2>Job</h2>
             </div>
             <div id="desc-header">
-                <p>Para continuar, realize o cadastro para verificar as vagas disponíveis</p>
+                <h3>Para continuar, realize o cadastro para acessar a plataforma</h3>
             </div>
     </header>
     <main>
-        <section class="area-login">
-            <div class="login">
+        <section class="area-cadastro">
+            <div class="cadastro">
                 <div>
-                    <h3>Cadastro</h3>
+                    <h4>Cadastro</h4>
                 </div>
-                <form>
-                    <input class="nome-aut" type="text" name="nome" placeholder="Nome">
-                    <input class="email-aut"   type="password" name="email" placeholder="E-mail">
-                    <input class="senha-aut"   type="password" name="senha" placeholder="Senha">
-               <p>Entre com outra conta.</p>
-               <input  class="btn-google" type="submit" value="">
-               <input  class="btn-entrar" type="submit" value="Cadastrar">
-               <p>Já possui uma conta?</p>
-               <div class="nova-conta">
-               <input  class="btn-cadast" type="submit" value="Entrar">
-               </div>
+                <form action="">
+                    <div class="single-input">
+                        
+                        <input  type="text" name="" id="nome" class="input" required>
+                        <label for="nome">Nome</label>
+                    </div>
+                    <div class="single-input">
+                        <input type="email" name="" id="email" class="input" required>
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="single-input">
+                        <input type="password" name="" id="senha" class="input" required>
+                        <label for="senha">Senha</label>
+                    </div>
+                    <p>Entre com outra conta.</p>
+                <input  class="btn-google" type="submit" value="">
+                <input  id="btnCadastro"  type="button" value="Cadastrar">
+                <p>Já possui uma conta?</p>
+                <div class="possui-conta">
+                <input  id="btn-entrar" type="submit" value="Entrar">
+                </div>
             </form>
             </div>
         </section>

@@ -30,6 +30,26 @@ header{
     align-content: center;
     align-items: center;
 } 
+h3{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    margin-top: 20px;
+    font-family:'Poppins', sans-serif;
+
+}
+p{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    margin-top: 20px;
+    font-family:'Roboto', sans-serif;
+
+}
 h1{
     font-size:3rem;
     color: #225E77;
@@ -59,7 +79,7 @@ main{
     width: auto;
     height:50%;
 }
-.area-login{
+.area-cadastro{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,89 +88,99 @@ main{
     align-items: center;
     margin-top: -200px;
 }
-.login{
+.cadastro{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #F7F5F5;
     border-radius: 10px;
-    width: 400px;
-    height: 550px;
+    width: 500px;
+    height: 600px;
     padding: 35px;
 }
-.login form{
+.cadastro form{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-.login input{
-    margin-top: 10px;
-    border: none;
-    height: 45px;
-    outline: none;
-    border-radius: 8px;
-}
-.login h3{
+.cadastro h4{
     padding-top: 10px;
     height: auto;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
     font-size: 2rem;
 }
-input::placeholder{
+div.single-input{
+    width: 100%;
+    margin:20px 0;
+    position: relative;
+}
+div.single-input label{
+    font-size: 16px;
+    position : absolute;
+    left: 0;
+    bottom: 5px;
     color: black;
+    cursor: text;
+    transition: 0.5s ease-in-out;
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    padding-left: 10px;
-    padding-top: 10px;
+}
+div.single-input .input{
+    width: 100%;
+    padding: 5px;
+    border: 0 ;
+    border-bottom: 2px solid rgb(000,000,000);
+    outline: 0;
+    font-size: 16px;
+    background-color: transparent;
+}
+div.single-input .input:focus ~ label,
+div.single-input .input:valid ~ label{
+    transform: translateY(-24px);
+    font-size: 12px;
 }
 .btn-google{
-    width:40px;
+    height: 45px;
+    width: 45px;
     background-image: url(../img/google.png);
     background-repeat: no-repeat;
     background-size: auto;
     display: flex;
     margin-left:44%;
     margin-bottom: 5% ;
-    
+    border: none;
+    cursor: pointer;
+    box-shadow: #000 (1,2);
 }
-.btn-entrar{
+#btnCadastro{
+    height: 50px;
     display: block;
     background-color: #225E77;
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius:5px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
 }
-a{
-    color: #225E77;
-    text-decoration: none;
-    margin-left: 200px;
+#btn-entrar{
     margin-top: 10px;
-    font-family:'Roboto', sans-serif;
-}
-p{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    margin: 0;
-    margin-top: 20px;
-    font-family:'Roboto', sans-serif;
-}
-.btn-cadast{
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     width:100px;
     background-color: #E7E7E7;
-    color: black;
-    font: 1rem;
+    color: #000;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
-.nova-conta{
+.possui-conta{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+

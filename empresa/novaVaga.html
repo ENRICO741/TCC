@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" sizes="15x15" href="../img/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">   
     <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "asfBZcBqQ3");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
     <link rel="stylesheet" href="../css/novaVaga.css">
-    <title>Document</title>
+    <script src="../js/vagaEmpresa.js" defer type="module"></script>
+    <title>Nova Vaga</title>
 </head>
 <body>
     <header>
@@ -17,12 +19,20 @@
             <div class="logo">
                 <img src="../img/logo.png" alt="">
             </div>
-            <div class="barraPesquisa">
-                <input type="text">
-                <img src="../img/pesquisa.png" alt="">
-            </div>
             <div class="fotoPerfil">
-                
+                <nav id="colorNav">
+                    <li class="red">
+                        <a href="#" class="fa fa-bars"></a>
+                        <ul>
+                            <li><a href="">Perfil</a></li>
+                            <li><a href="../candidato/vagas.html">Vagas</a></li>
+                            <li><a href="../empresa/pesquisarCandidato.html">Pesquisar candidato</a></li>
+                            <li><a href="../empresa/redefinicao.html">Redefinir senha</a></li>
+                            <li><a href="../empresa/">Politica de Acessibilidade</a></li>
+                            <li><a href="../empresa/login.html">Sair</a></li>
+                        </ul>
+                    </li>
+                </nav>
             </div>
         </div>
         <div class="conteinerTitulo">
@@ -32,9 +42,9 @@
     <main>
         <div class="menuVagas">
             <div class="menuItens">
-                <a href="">Vagas Inativas</a>
-                <a href="">Vagas Ativas</a>
-                <a href="">Historico de Vagas</a>
+                <a href="../empresa/vagasInativas.html">Vagas Inativas</a>
+                <a href="../empresa/vagasAtivas.html">Vagas Ativas</a>
+                <a href="../empresa/vagasHistorico.html">Historico de Vagas</a>
                 <p>Nova vaga</p>
             </div>
         </div>
@@ -47,21 +57,25 @@
                     <div class="inputs">
                         <div class="tituloVaga">
                             <p>Titulo da vaga</p>
-                            <input type="text" required>
+                            <input type="text" id="tituloVaga" required>
                         </div>
                         <div class="descricao">
                             <p>Descrição</p>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea name="" id="descricaoVaga" cols="30" rows="10"></textarea>
                         </div>
                         <div class="requisitos">
                             <p>Requisitos</p>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea name="" id="requisitosVaga" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                     <div class="selects">
                         <div class="deficiencia">
+                            <p>Tipo de Deficiencia</p>
+                            <select name="" id="selectTipoDeficiencia" ></select>
+                        </div>
+                        <div>
                             <p>Deficiencia</p>
-                            <select name="" id="" required></select>
+                            <select name="" id="selectDeficiencia" ></select>
                         </div>
                         <div class="tipoContrato">
                             <p>Tipo de Contrato</p>
@@ -77,30 +91,6 @@
                         <div class="checkbox">
                             <input type="checkbox" id="beneficio1"> Beneficio
                         </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="beneficio2"> Beneficio
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="beneficio3"> Beneficio
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="beneficio4"> Beneficio
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="beneficio5"> Beneficio
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="beneficio6"> Beneficio
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="beneficio7"> Beneficio
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="beneficio8"> Beneficio
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="beneficio9"> Beneficio
-                        </div>
                     </div>
                 </div>
                 <div class="suporte">
@@ -111,30 +101,6 @@
                         <div class="checkbox">
                             <input type="checkbox" id="suporte1"> Suporte
                         </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="suporte2"> Suporte
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="suporte3"> Suporte
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="suporte4"> Suporte
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="suporte5"> Suporte
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="suporte6"> Suporte
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="suporte7"> Suporte
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="suporte8"> Suporte
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="suporte9"> Suporte
-                        </div>
                     </div>
                 </div>
                 <div class="formacao">
@@ -143,11 +109,15 @@
                     </div>
                     <div class="grauFormacao">
                         <p>Grau de formação</p>
-                        <select name="" id=""></select>
+                        <select name="selectGrau" id="selectGrau">
+                           
+                        </select>
                     </div>
                     <div class="formacaoDesejada">
                         <p>Formação desejada</p>
-                        <select name="" id=""></select>
+                        <select name="idSelectCurso" id="selectCurso">
+
+                        </select>
                     </div>
                 </div>
                 <div class="horario">
@@ -157,15 +127,18 @@
                     <div class="selects">
                         <div class="inicioExpediente">
                             <p>Inicio do expediente</p>
-                            <select name="" id=""></select>
+                            <input id="horarioInicio" type="time">
                         </div>
                         <div class="fimExpediente">
                             <p>Fim do expediente</p>
-                            <select name="" id=""></select>
+                            <input id="horarioFim" type="time">
                         </div>
                         <div class="cargaHoraria">
-                            <p>Carga Horaria</p>
-                            <select name="" id=""></select>
+                            <p>Visibilidade</p>
+                            <select name="" id="visibilidade">
+                                <option value="1">Exibir</option>
+                                <option value="0">Ocultar</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -179,27 +152,27 @@
                     <div class="endereco">
                         <div class="CEP">
                             <p>CEP</p>
-                            <input type="text">
+                            <input type="text" id="cep">
                         </div>
                         <div class="logradouro">
                             <p>Logradouro</p>
-                            <input type="text">
+                            <input type="text" id="logradouro">
                         </div>
                         <div class="numero">
                             <p>Numero</p>
-                            <input type="text">
+                            <input type="text" id="numero">
                         </div>
                         <div class="cidade">
                             <p>Cidade</p>
-                            <select name="" id=""></select>
+                            <select name="" id="cidade"></select>
                         </div>
                         <div class="estado">
                             <p>Estado</p>
-                            <select name="" id=""></select>
+                            <select name="" id="estado"></select>
                         </div>
                         <div class="complemento">
                             <p>Complemento</p>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea name="" id="complemento" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                 </div>

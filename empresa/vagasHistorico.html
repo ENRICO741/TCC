@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" sizes="15x15" href="../img/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">   
     <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "asfBZcBqQ3");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
     <link rel="stylesheet" href="../css/vagasHistorico.css">
-    <title>Document</title>
+    <title>Histórico de Vagas</title>
 </head>
 <body>
     <header>
@@ -17,12 +18,20 @@
             <div class="logo">
                 <img src="../img/logo.png" alt="">
             </div>
-            <div class="barraPesquisa">
-                <input type="text">
-                <img src="../img/pesquisa.png" alt="">
-            </div>
             <div class="fotoPerfil">
-                
+                <nav id="colorNav">
+                    <li class="red">
+                        <a href="#" class="fa fa-bars"></a>
+                        <ul>
+                            <li><a href="">Perfil</a></li>
+                            <li><a href="../candidato/vagas.html">Vagas</a></li>
+                            <li><a href="../empresa/pesquisarCandidato.html">Pesquisar candidato</a></li>
+                            <li><a href="../empresa/redefinicao.html">Redefinir senha</a></li>
+                            <li><a href="../empresa/">Politica de Acessibilidade</a></li>
+                            <li><a href="../empresa/login.html">Sair</a></li>
+                        </ul>
+                    </li>
+                </nav>
             </div>
         </div>
         <div class="conteinerTitulo">
@@ -32,10 +41,10 @@
     <main>
         <div class="menuVagas">
             <div class="menuItens">
-                <a href="">Vagas Inativas</a>
-                <a href="">Vagas Ativas</a>
+                <a href="../empresa/vagasInativas.html">Vagas Inativas</a>
+                <a href="../empresa/vagasAtivas.html">Vagas Ativas</a>
                 <p>Historico de Vagas</p>
-                <a href="">Nova vaga</a>
+                <a href="../empresa/novaVaga.html">Nova vaga</a>
             </div>
         </div>
         <div class="filtros">
@@ -74,32 +83,16 @@
                     <select name="" id=""></select>
                 </div>
             </div>
-            <div class="filtrosSalario">
-                <div class="tituloSalario">
-                    <h3>Salário</h3>
+            <div class="nivelAcademico">
+                <div class="tituloNivelAcademico">
+                    <h3>Suporte Desejado</h3>
                 </div>
-                <div class="radioSalario">
-                    <div class="inputSalario">
-                        <input type="radio" name="rad"> Acima de R$ 1.200,00
-                    </div>
-                    <div class="inputSalario">
-                        <input type="radio" name="rad"> Acima de R$ 2.500,00
-                    </div>
-                    <div class="inputSalario">
-                        <input type="radio" name="rad"> Acima de R$ 5.000,00
-                    </div>
-                    <div class="inputSalario">
-                        <input type="radio" name="rad"> Acima de R$ 10.000,00
-                    </div>
-                </div>
-            </div>
-            <div class="suporteOferecido">
-                <div class="tituloSuporte">
-                    <h3>Suporte Oferecido</h3>
-                </div>
-                <div class="selectSuporte">
+                <div class="selectNivelAcademico">
                     <select name="" id=""></select>
                 </div>
+            </div>
+            <div class="botaoAplicar">
+                <button>Aplicar</button>
             </div>
         </div>
         <div class="candidatosConteiner">
@@ -116,7 +109,7 @@
                                 <p>Alphavile - SP</p> 
                             </div>
                             <div class="tipoDeficiencia">
-                                <h2>Deficiencia: Visual</h2>
+                                <h2>Deficiencia: Visualinfsijgssg</h2>
                             </div>
                         </div>
                     </div>

@@ -6,11 +6,75 @@
 
 
 
+/* 
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+
+ */
+
+
+
+
+
+
+
+
+
+
 body{
-    height: 100%;
+    height: fit-content;
+    min-height: 100vh;
     width: auto;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
@@ -49,6 +113,9 @@ header{
     border: none;
     background: transparent; 
     margin:5px;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
 }
 
 .barraPesquisa img{
@@ -68,12 +135,12 @@ header{
     height: 65px;
     width: auto;
     background-color: #DCEBF2;
-    
+    display: flex;
+    align-items: center;
 }
 
 .conteinerTitulo h1{
     font-size: 32px;
-    font-family: 'Poppins', sans-serif;
     color: #2795D2;
     margin-top: 8px;
     margin-left: 12vw;
@@ -96,6 +163,8 @@ main{
     width: 18vw;
     background-color: #fefefe;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .filtros .tituloFiltros{
@@ -118,11 +187,9 @@ main{
 }
 
 .filtros .filtrosDeficiencia .opcoesDeficiencia{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     margin-left: 45px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .filtros .filtrosDeficiencia .opcoesDeficiencia .checkbox{
@@ -137,21 +204,21 @@ main{
     flex-direction: column;
 }
 
-.filtros .filtrosRegiao .tituloRegiao{
+.filtrosRegiao .tituloRegiao{
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .filtrosRegiao .selectEstado{
+.filtrosRegiao .selectEstado{
     font-size: 1.25rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 15px;
     margin-left: 40px;
 }
 
-.filtros .filtrosRegiao .selectEstado select{
+.filtrosRegiao .selectEstado select{
     width: 5vw;
     height: 30px;
     background-color: #F5F5F5;
@@ -159,14 +226,14 @@ main{
     border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.filtros .filtrosRegiao .selectCidade{
+.filtrosRegiao .selectCidade{
     font-size: 1.25rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 15px;
     margin-left: 40px;
 }
 
-.filtros .filtrosRegiao .selectCidade select{
+.filtrosRegiao .selectCidade select{
     width: 10vw;
     height: 30px;
     background-color: #F5F5F5;
@@ -174,19 +241,19 @@ main{
     border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.filtros .filtrosSalario .tituloSalario{
+.filtrosSalario .tituloSalario{
     font-size: 1.25rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .filtrosSalario .radioSalario{
+.filtrosSalario .radioSalario{
     display: flex;
     flex-direction: column;
 }
 
-.filtros .filtrosSalario .radioSalario .inputSalario{
+.radioSalario .inputSalario{
     font-size: 1.125rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 15px;
@@ -199,24 +266,41 @@ main{
     margin-bottom: 25px;
 }
 
-.filtros .suporteOferecido .tituloSuporte{
+.suporteOferecido .tituloSuporte{
     font-size: 1.25rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .suporteOferecido .selectSuporte{
+.suporteOferecido .selectSuporte{
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .suporteOferecido .selectSuporte select{
+.suporteOferecido .selectSuporte select{
     width: 10vw;
     height: 30px;
     background-color: #F5F5F5;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.filtros .botaoAplicar{
+    align-self: flex-end;
+}
+
+.filtros .botaoAplicar button{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    height: 35px;
+    width: 5vw;
+    border-radius: 10px;
+    background-color: #1E7596;
+    color: white;
+    border: none;
+    margin-bottom: 25px;
+    margin-right: 35px;
 }
 
 .vagasConteiner{
@@ -230,7 +314,7 @@ main{
 }
 
 .vagasConteiner .vagas{
-    height: 250px;
+    height: fit-content;
     width: 35vw;
     background-color: #fefefe;
     border-radius: 5px;
@@ -303,6 +387,7 @@ main{
     width: 30vw;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 .vagasConteiner .vagas .footerVagas .tipoDeficiencia{
@@ -310,10 +395,11 @@ main{
     align-items: center;
     justify-content: center;
     height: 35px;
-    width: 10vw;
+    width: fit-content;
     border-radius: 10px;
     background-color: #2795D2;
     margin-top: 25px;
+    padding: 5px 20px 5px 20px;
 }
 
 .vagasConteiner .vagas .footerVagas .tipoDeficiencia h2{
@@ -352,4 +438,37 @@ footer p{
 .versao{
     position: absolute;
     right: 5%;
+}
+
+@media (min-width:800px) and (max-width:1720px){
+    main{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 75px;
+    }
+
+    .filtros{
+    height: fit-content;
+    width: 45vw;
+    background-color: #fefefe;
+    border-radius: 5px;
+    }
+
+    .vagasConteiner .vagas{
+        width: 45vw;
+    }
+
+    .vagasConteiner .vagas .headerVagas{
+        justify-content: center;
+    }
+
+    .vagasConteiner .vagas .footerVagas .tipoDeficiencia h2{
+        font-size: 0.75rem;
+    }
+
+    .vagasConteiner .vagas .footerVagas .botaoSaibaMais button{
+        font-size: 0.75rem;
+    }
 }

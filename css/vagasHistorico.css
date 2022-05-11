@@ -4,13 +4,128 @@
     box-sizing: border-box;
 }
 
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+section, footer, nav{
+	display: block;
+}
+
+
+/*----------------------------
+	The Navigation Menu
+-----------------------------*/
+
+#colorNav > ul > li > a{
+	color:inherit;
+	text-decoration:none !important;
+	font-size:24px;
+}
+
+#colorNav li ul{
+	position:absolute;
+	list-style:none;
+	text-align:center;
+	width:180px;
+	left:50%;
+	margin-left:-90px;
+	top:60px;
+	font:bold 12px 'Open Sans Condensed', sans-serif;
+	
+	/* This is important for the show/hide CSS animation */
+	max-height:0px;
+	overflow:hidden;
+	
+	-webkit-transition:max-height 0.4s linear;
+	-moz-transition:max-height 0.4s linear;
+	transition:max-height 0.4s linear;
+}
+
+#colorNav li ul li{
+	background-color:#313131;
+}
+
+#colorNav li ul li a{
+	padding:12px;
+	color:#fff !important;
+	text-decoration:none !important;
+	display:block;
+}
+
+#colorNav li ul li:nth-child(odd){ /* zebra stripes */
+	background-color:#363636;
+}
+
+#colorNav li ul li:hover{
+	background-color:#444;
+}
+
+#colorNav li ul li:first-child{
+	border-radius:3px 3px 0 0;
+	margin-top:20px;
+	position:relative;
+}
+
+#colorNav li ul li:first-child:before{ /* the pointer tip */
+	content:'';
+	position:absolute;
+	width:1px;
+	height:1px;
+	border:5px solid transparent;
+	border-bottom-color:#313131;
+	left:50%;
+	top:-10px;
+	margin-left:-5px;
+}
+
+#colorNav li ul li:last-child{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+/* This will trigger the CSS */
+/* transition animation on hover */
+
+#colorNav li:hover ul{
+	max-height:400px; /* Increase when adding more dropdown items */
+}
+
+
+/*----------------------------
+	Color Themes
+-----------------------------*/
+
+#colorNav li.red{		
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+    background-color: #808080;
+    position: absolute;
+
+}
+
+#colorNav li.red::marker{
+    color: #1E7596;
+}
+
+
+
 
 
 body{
-    height: 100%;
+    height: fit-content;
+    min-height: 100vh;
     width: auto;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
@@ -34,27 +149,6 @@ header{
 
 }
 
-.barraPesquisa{
-    height: 50px;
-    width: 15vw;
-    margin-left: 100px;
-    border-radius: 100px;
-    display: flex;
-    background: #FFFF;
-}
-
-.barraPesquisa input{
-    width: 82%;
-    border-radius: 100px;
-    border: none;
-    background: transparent; 
-    margin:5px;
-}
-
-.barraPesquisa img{
-    margin:5px auto;
-}
-
 .fotoPerfil{
     width: 72px;
     height: 72px;
@@ -68,18 +162,19 @@ header{
     height: 65px;
     width: auto;
     background-color: #DCEBF2;
-    
+    display: flex;
+    align-items: center;
 }
 
 .conteinerTitulo h1{
     font-size: 32px;
-    font-family: 'Poppins', sans-serif;
     color: #2795D2;
     margin-top: 8px;
     margin-left: 12vw;
 }
 
 main{
+    height: auto;
     width: auto;
     padding-top: 75px;
     padding-inline-start: 21%;
@@ -124,6 +219,8 @@ main{
 }
 
 .filtros{
+    display: flex;
+    flex-direction: column;
     height: fit-content;
     width: 18vw;
     background-color: #fefefe;
@@ -151,9 +248,7 @@ main{
 
 .filtros .opcoesDeficiencia{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 100px;
+    flex-direction: column;
     margin-left: 45px;
 }
 
@@ -205,50 +300,68 @@ main{
     border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.filtros .tituloSalario{
+.filtros .tituloTipoVaga{
     font-size: 1.25rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .radioSalario{
+.filtros .radioTipoVaga{
     display: flex;
     flex-direction: column;
 }
 
-.filtros .radioSalario .inputSalario{
+.filtros .radioTipoVaga .inputTipoVaga{
     font-size: 1.125rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 15px;
     margin-left: 45px;
 }
 
-.filtros .suporteOferecido{
+.filtros .nivelAcademico{
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
-.filtros .suporteOferecido .tituloSuporte{
+.filtros .nivelAcademico .tituloNivelAcademico{
     font-size: 1.25rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .suporteOferecido .selectSuporte{
+.filtros .nivelAcademico .selectNivelAcademico{
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .suporteOferecido .selectSuporte select{
+.filtros .nivelAcademico .selectNivelAcademico select{
     width: 10vw;
     height: 30px;
     background-color: #F5F5F5;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.25);
 }
+
+.filtros .botaoAplicar{
+    align-self: flex-end;
+}
+
+.filtros .botaoAplicar button{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    height: 35px;
+    width: 5vw;
+    border-radius: 10px;
+    background-color: #1E7596;
+    color: white;
+    border: none;
+    margin-bottom: 25px;
+    margin-right: 35px;
+}
+
 
 .candidatosConteiner{
     width: auto;
@@ -261,7 +374,7 @@ main{
 }
 
 .candidatosConteiner .candidatos{
-    height: 250px;
+    height: fit-content;
     width: 35vw;
     background-color: #fefefe;
     border-radius: 5px;
@@ -336,6 +449,7 @@ main{
     display: flex;
     justify-content: right;
     column-gap: 25px;
+    margin-bottom: 25px;
 }
 
 .candidatosConteiner .candidatos .tipoDeficiencia{
@@ -343,10 +457,11 @@ main{
     align-items: center;
     justify-content: center;
     height: 35px;
-    width: 10vw;
+    width: fit-content;
     border-radius: 10px;
     background-color: #2795D2;
     margin-top: 10px;
+    padding: 5px 20px 5px 20px;
 }
 
 .candidatosConteiner .candidatos .tipoDeficiencia h2{
@@ -380,7 +495,7 @@ main{
 }
 
 footer{
-    height: 100px;
+    height: 7vh;
     width: auto;
     background-color: #1E7596;
     display: flex;
@@ -397,4 +512,45 @@ footer p{
 .versao{
     position: absolute;
     right: 5%;
+}
+
+@media (min-width:800px) and (max-width:1720px){
+    main{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 75px;
+    }
+
+    .menuVagas{
+        margin-bottom: 10px;
+    }
+
+    .filtros{
+    height: fit-content;
+    width: 45vw;
+    background-color: #fefefe;
+    border-radius: 5px;
+    }
+
+    .candidatosConteiner .candidatos{
+        width: 45vw;
+    }
+
+    .candidatosConteiner .candidatos .headerCandidatos{
+        justify-content: center;
+    }
+
+    .candidatosConteiner .candidatos .tipoDeficiencia h2{
+        font-size: 0.75rem;
+    }
+
+    .candidatosConteiner .candidatos .footerCandidatos .botaoCandidatos button{
+        font-size: 0.75rem;
+    }
+    
+    .candidatosConteiner .candidatos .footerCandidatos .botaoSaibaMais button{
+        font-size: 0.75rem;
+    }
 }

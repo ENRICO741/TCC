@@ -70,7 +70,7 @@ p{
 }
 #btn-empresa{
   height:15%;
-  width: 18%;
+  width: 20%;
   min-height:10%;
   min-width:10%;
   background-color: #1E7596;
@@ -134,7 +134,7 @@ p{
 }
 #btn-candidato{
     height:15%;
-    width: 18%;
+    width: 20%;
     min-height:10%;
     min-width:10%;
     background-color: #1E7596;
@@ -176,7 +176,7 @@ p{
 span{
     font-size: 2.5rem;
     font-family: 'Poppins', sans-serif;
-    margin-left:-40px;
+    
 }
 @media (max-width:1000px){
     span{

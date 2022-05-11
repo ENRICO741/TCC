@@ -7,7 +7,8 @@
 
 
 body{
-    height: 100%;
+    height: fit-content;
+    min-height: 100vh;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -35,6 +36,30 @@ header{
 
 }
 
+.barraPesquisa{
+    height: 50px;
+    width: 15vw;
+    margin-left: 100px;
+    border-radius: 100px;
+    display: flex;
+    background: #FFFF;
+}
+
+.barraPesquisa input{
+    width: 82%;
+    border-radius: 100px;
+    border: none;
+    background: transparent; 
+    margin:5px;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.barraPesquisa img{
+    margin:5px auto;
+}
+
 .fotoPerfil{
     width: 72px;
     height: 72px;
@@ -48,12 +73,12 @@ header{
     height: 65px;
     width: auto;
     background-color: #DCEBF2;
-    
+    display: flex;
+    align-items: center;
 }
 
 .conteinerTitulo h1{
     font-size: 32px;
-    font-family: 'Poppins', sans-serif;
     color: #2795D2;
     margin-top: 8px;
     margin-left: 12vw;

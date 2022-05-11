@@ -4,23 +4,141 @@
     box-sizing: border-box;
 }
 
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+section, footer, nav{
+	display: block;
+}
+
+
+/*----------------------------
+	The Navigation Menu
+-----------------------------*/
+
+#colorNav > ul > li > a{
+	color:inherit;
+	text-decoration:none !important;
+	font-size:24px;
+}
+
+#colorNav li ul{
+	position:absolute;
+	list-style:none;
+	text-align:center;
+	width:180px;
+	left:50%;
+	margin-left:-90px;
+	top:60px;
+	font:bold 12px 'Open Sans Condensed', sans-serif;
+	
+	/* This is important for the show/hide CSS animation */
+	max-height:0px;
+	overflow:hidden;
+	
+	-webkit-transition:max-height 0.4s linear;
+	-moz-transition:max-height 0.4s linear;
+	transition:max-height 0.4s linear;
+}
+
+#colorNav li ul li{
+	background-color:#313131;
+}
+
+#colorNav li ul li a{
+	padding:12px;
+	color:#fff !important;
+	text-decoration:none !important;
+	display:block;
+}
+
+#colorNav li ul li:nth-child(odd){ /* zebra stripes */
+	background-color:#363636;
+}
+
+#colorNav li ul li:hover{
+	background-color:#444;
+}
+
+#colorNav li ul li:first-child{
+	border-radius:3px 3px 0 0;
+	margin-top:20px;
+	position:relative;
+}
+
+#colorNav li ul li:first-child:before{ /* the pointer tip */
+	content:'';
+	position:absolute;
+	width:1px;
+	height:1px;
+	border:5px solid transparent;
+	border-bottom-color:#313131;
+	left:50%;
+	top:-10px;
+	margin-left:-5px;
+}
+
+#colorNav li ul li:last-child{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+/* This will trigger the CSS */
+/* transition animation on hover */
+
+#colorNav li:hover ul{
+	max-height:400px; /* Increase when adding more dropdown items */
+}
+
+
+/*----------------------------
+	Color Themes
+-----------------------------*/
+
+#colorNav li.red{		
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+    background-color: #808080;
+    position: absolute;
+
+}
+
+#colorNav li.red::marker{
+    color: #1E7596;
+}
+
+
+
+
+
 
 
 body{
-    height: 100%;
+    height: fit-content;
+    min-height: 100vh;
     width: auto;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
+    height: 187px;
     display: flex;
     flex-direction: column;
 }
 
 .conteinerSearch{
     height: 9vh;
-    width: auto;
+    
     background-color: #1E7596;
     display: flex;
     flex-direction: row;
@@ -32,27 +150,6 @@ header{
     width: 95px;
     height: 95px;
 
-}
-
-.barraPesquisa{
-    height: 50px;
-    width: 15vw;
-    margin-left: 100px;
-    border-radius: 100px;
-    display: flex;
-    background: #FFFF;
-}
-
-.barraPesquisa input{
-    width: 82%;
-    border-radius: 100px;
-    border: none;
-    background: transparent; 
-    margin:5px;
-}
-
-.barraPesquisa img{
-    margin:5px auto;
 }
 
 .fotoPerfil{
@@ -68,12 +165,12 @@ header{
     height: 65px;
     width: auto;
     background-color: #DCEBF2;
-    
+    display: flex;
+    align-items: center;
 }
 
 .conteinerTitulo h1{
     font-size: 32px;
-    font-family: 'Poppins', sans-serif;
     color: #2795D2;
     margin-top: 8px;
     margin-left: 12vw;
@@ -84,12 +181,11 @@ main{
     padding-top: 75px;
     padding-inline-start: 21%;
     padding-inline-end: 21%;
-    width: auto;
     background-color: #F0F0F0;
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
     flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .menuVagas{
@@ -124,6 +220,8 @@ main{
 }
 
 .filtros{
+    display: flex;
+    flex-direction: column;
     height: fit-content;
     width: 18vw;
     background-color: #fefefe;
@@ -151,9 +249,7 @@ main{
 
 .filtros .opcoesDeficiencia{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 100px;
+    flex-direction: column;
     margin-left: 45px;
 }
 
@@ -205,49 +301,66 @@ main{
     border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.filtros .tituloSalario{
+.filtros .tituloTipoVaga{
     font-size: 1.25rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .radioSalario{
+.filtros .radioTipoVaga{
     display: flex;
     flex-direction: column;
 }
 
-.filtros .radioSalario .inputSalario{
+.filtros .radioTipoVaga .inputTipoVaga{
     font-size: 1.125rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 15px;
     margin-left: 45px;
 }
 
-.filtros .suporteOferecido{
+.filtros .nivelAcademico{
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
-.filtros .suporteOferecido .tituloSuporte{
+.filtros .nivelAcademico .tituloNivelAcademico{
     font-size: 1.25rem;
     font-family: 'Poppins', sans-serif;
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .suporteOferecido .selectSuporte{
+.filtros .nivelAcademico .selectNivelAcademico{
     margin-top: 25px;
     margin-left: 40px;
 }
 
-.filtros .suporteOferecido .selectSuporte select{
+.filtros .nivelAcademico .selectNivelAcademico select{
     width: 10vw;
     height: 30px;
     background-color: #F5F5F5;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.filtros .botaoAplicar{
+    align-self: flex-end;
+}
+
+.filtros .botaoAplicar button{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    height: 35px;
+    width: 5vw;
+    border-radius: 10px;
+    background-color: #1E7596;
+    color: white;
+    border: none;
+    margin-bottom: 25px;
+    margin-right: 35px;
 }
 
 .candidatosConteiner{
@@ -261,7 +374,7 @@ main{
 }
 
 .candidatosConteiner .candidatos{
-    height: 250px;
+    height: fit-content;
     width: 35vw;
     background-color: #fefefe;
     border-radius: 5px;
@@ -270,36 +383,36 @@ main{
     align-items: center;
 }
 
-.candidatosConteiner .candidatos .headerCandidatos{
+.candidatos .headerCandidatos{
     width: 30vw;
     display: flex;
     justify-content: space-between;
 }
 
-.candidatosConteiner .candidatos .headerCandidatos .informacaoCandidatos{
+.headerCandidatos .informacaoCandidatos{
     display: flex;
     flex-direction: row;
 }
 
-.candidatosConteiner .candidatos .headerCandidatos .imgEmpresa img{
+ .headerCandidatos .imgEmpresa img{
     width: 125px;
     height: 125px;
     margin-top: 35px;
 }
 
-.candidatosConteiner .candidatos .headerCandidatos .conteudoCandidato{
+ .headerCandidatos .conteudoCandidato{
     display: flex;
     flex-direction: column;
     margin-left: 25px;
 }
 
-.candidatosConteiner .candidatos .headerCandidatos .conteudoCandidato h1{
+.candidatos .headerCandidatos .conteudoCandidato h1{
     margin-top: 25px;
     font-size: 32px;
     font-family: 'Poppins', sans-serif;
 }
 
-.candidatosConteiner .candidatos .headerCandidatos .conteudoCandidato .localCandidato{
+.conteudoCandidato .localCandidato{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -309,12 +422,12 @@ main{
     margin-bottom: 5px;
 }
 
-.candidatosConteiner .candidatos .headerCandidatos .conteudoCandidato .localCandidato img{
+.conteudoCandidato .localCandidato img{
     height: 25px;
     width: 25px;
 }
 
-.candidatosConteiner .candidatos .headerCandidatos .candidatoAtivo{
+.candidatos .headerCandidatos .candidatoAtivo{
     display: flex;
     font-size: 16px;
     color: #AA3E3E;
@@ -325,37 +438,39 @@ main{
     background-color: white;
 }
 
-.candidatosConteiner .candidatos .headerCandidatos .candidatoAtivo img{
+.headerCandidatos .candidatoAtivo img{
     height: 25px;
     width: 25px;
     margin-right: 5px;
 }
 
-.candidatosConteiner .candidatos .footerCandidatos{
+.candidatos .footerCandidatos{
     width: 30vw;
     display: flex;
     justify-content: right;
     column-gap: 25px;
+    margin-bottom: 25px;
 }
 
-.candidatosConteiner .candidatos .tipoDeficiencia{
+.candidatos .tipoDeficiencia{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 35px;
-    width: 10vw;
+    width: fit-content;
     border-radius: 10px;
     background-color: #2795D2;
     margin-top: 10px;
+    padding: 5px 20px 5px 20px;
 }
 
-.candidatosConteiner .candidatos .tipoDeficiencia h2{
+.candidatos .tipoDeficiencia h2{
     font-size: 20px;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
 
-.candidatosConteiner .candidatos .footerCandidatos .botaoCandidatos button{
+.candidatos .footerCandidatos .botaoCandidatos button{
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     height: 35px;
@@ -367,7 +482,7 @@ main{
     margin-top: 25px;
 }
 
-.candidatosConteiner .candidatos .footerCandidatos .botaoSaibaMais button{
+.candidatos .footerCandidatos .botaoSaibaMais button{
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     height: 35px;
@@ -397,4 +512,45 @@ footer p{
 .versao{
     position: absolute;
     right: 5%;
+}
+
+@media (min-width:800px) and (max-width:1720px){
+    main{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 75px;
+    }
+
+    .menuVagas{
+        margin-bottom: 10px;
+    }
+
+    .filtros{
+    height: fit-content;
+    width: 45vw;
+    background-color: #fefefe;
+    border-radius: 5px;
+    }
+
+    .candidatosConteiner .candidatos{
+        width: 45vw;
+    }
+
+    .candidatosConteiner .candidatos .headerCandidatos{
+        justify-content: center;
+    }
+
+    .candidatosConteiner .candidatos .tipoDeficiencia h2{
+        font-size: 0.75rem;
+    }
+
+    .candidatosConteiner .candidatos .footerCandidatos .botaoCandidatos button{
+        font-size: 0.75rem;
+    }
+    
+    .candidatosConteiner .candidatos .footerCandidatos .botaoSaibaMais button{
+        font-size: 0.75rem;
+    }
 }

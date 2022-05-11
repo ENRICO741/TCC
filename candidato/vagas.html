@@ -8,10 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">   
     <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "asfBZcBqQ3");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+    <script src="../js/vaga.js" defer type="module"></script>
+    <script src="../js/modalVagaCandidato.js" defer></script>
     <link rel="stylesheet" href="../css/vagas.css">
+    <link rel="stylesheet" href="../css/modalVaga.css">
     <title>Vagas</title>
 </head>
 <body>
+    <section id="containerModal">
+        <div id='bodyModal'> 
+
+        </div>
+    </section>
     <header>
         <div class="conteinerSearch">
             <div class="logo">
@@ -93,6 +101,9 @@
                     <select name="" id=""></select>
                 </div>
             </div>
+            <div class="botaoAplicar">
+                <button>Aplicar</button>
+            </div>
         </div>
         <div class="vagasConteiner">
             <div class="vagas">
@@ -124,114 +135,21 @@
                     <div class="tipoDeficiencia">
                         <h2>Deficiencia: Visual</h2>
                     </div>
-                    <div class="botaoSaibaMais">
-                        <button>Saiba mais</button>
-                    </div>
-                </div>
-            </div>
-            <div class="vagas">
-                <div class="headerVagas">
-                    <div class="informacaoVaga">
-                        <div class="imgEmpresa">
-                            <img src="../img/logoEmpresa.png" alt="">
-                        </div>
-                        <div class="conteudoVaga">
-                            <h1>Desenvolvedor Web</h1>
-                            <div class="empresaVaga">
-                                <img src="../img/empresa.png" alt=""> 
-                                <p>Nubank</p> 
-                            </div>
-                            <div class="empresaVaga">
-                                <img src="../img/local.png" alt=""> 
-                                <p>Alphavile - SP</p> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="salvarVaga">
-                        <button>
-                            <img src="../img/salvar.png" alt=""> 
-                            <p>Salvar</p>
-                        </button> 
-                    </div>
-                </div>
-                <div class="footerVagas">
-                    <div class="tipoDeficiencia">
-                        <h2>Deficiencia: Visual</h2>
-                    </div>
-                    <div class="botaoSaibaMais">
-                        <button>Saiba mais</button>
-                    </div>
-                </div>
-            </div>
-            <div class="vagas">
-                <div class="headerVagas">
-                    <div class="informacaoVaga">
-                        <div class="imgEmpresa">
-                            <img src="../img/logoEmpresa.png" alt="">
-                        </div>
-                        <div class="conteudoVaga">
-                            <h1>Desenvolvedor Web</h1>
-                            <div class="empresaVaga">
-                                <img src="../img/empresa.png" alt=""> 
-                                <p>Nubank</p> 
-                            </div>
-                            <div class="empresaVaga">
-                                <img src="../img/local.png" alt=""> 
-                                <p>Alphavile - SP</p> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="salvarVaga">
-                        <button>
-                            <img src="../img/salvar.png" alt=""> 
-                            <p>Salvar</p>
-                        </button> 
-                    </div>
-                </div>
-                <div class="footerVagas">
-                    <div class="tipoDeficiencia">
-                        <h2>Deficiencia: Visual</h2>
-                    </div>
-                    <div class="botaoSaibaMais">
-                        <button>Saiba mais</button>
-                    </div>
-                </div>
-            </div>
-            <div class="vagas">
-                <div class="headerVagas">
-                    <div class="informacaoVaga">
-                        <div class="imgEmpresa">
-                            <img src="../img/logoEmpresa.png" alt="">
-                        </div>
-                        <div class="conteudoVaga">
-                            <h1>Desenvolvedor Web</h1>
-                            <div class="empresaVaga">
-                                <img src="../img/empresa.png" alt=""> 
-                                <p>Nubank</p> 
-                            </div>
-                            <div class="empresaVaga">
-                                <img src="../img/local.png" alt=""> 
-                                <p>Alphavile - SP</p> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="salvarVaga">
-                        <button>
-                            <img src="../img/salvar.png" alt=""> 
-                            <p>Salvar</p>
-                        </button> 
-                    </div>
-                </div>
-                <div class="footerVagas">
-                    <div class="tipoDeficiencia">
-                        <h2>Deficiencia: Visual</h2>
-                    </div>
-                    <div class="botaoSaibaMais">
+                    <div class="botaoSaibaMais" onClick="">
                         <button>Saiba mais</button>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Cadastro efetuado</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Seu cadastro foi efetuado com sucesso.
+                </div>
+            </div>
+        </div> -->
     </main>
     <footer>
         <div class="direitos">
